@@ -1,0 +1,63 @@
+"""
+TERCEIRO TESTE:
+
+Funcionalidade:Registro no Open Trivia Database
+Cenario: Registro no site 
+Dado que navego na pagina principal 
+E clico no botão registre se
+Quando carregado a pagina 
+Entao vejo 4 barras de digitação,usuario
+E senha
+E repetir senha
+E endereço de email
+Entao uma mensagem aparece mostrando que o resgistro foi concluido
+
+"""
+
+
+from selenium import webdriver
+from time import sleep 
+
+navegador = webdriver.Chrome()
+navegador.get(url='https://opentdb.com/')
+
+sleep(1)
+login = navegador.find_element_by_xpath('//*[@id="navbar"]/ul/li[5]/a').click()
+sleep(1)
+register = navegador.find_element_by_xpath('//*[@id="page-top"]/div[2]/form/div[4]/a').click()
+
+#Registrar
+
+sleep(1.5)
+
+#UserName
+username = 'larissalopes'
+username1 = navegador.find_element_by_xpath('//*[@id="username"]')
+username1.send_keys(username)
+
+sleep(1)
+
+#Password
+password = 'larissalopescosta'
+password1 = navegador.find_element_by_xpath('//*[@id="password"]')
+password1.send_keys(password)
+
+sleep(1)
+
+#RepeatPassword
+password = 'larissalopescosta'
+repeat = navegador.find_element_by_xpath('//*[@id="password_again"]')
+repeat.send_keys(password)
+
+sleep(1)
+
+#E-mail
+email = "larissalopes@gmail.com"
+email1 = navegador.find_element_by_xpath('//*[@id="email"]')
+email1.send_keys(email)
+
+sleep(1)
+
+#ConfirmRegister
+
+navegador.find_element_by_xpath('//*[@id="page-top"]/div[2]/form/button').click()
