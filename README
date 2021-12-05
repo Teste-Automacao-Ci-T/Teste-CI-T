@@ -1,0 +1,25 @@
+Obrigado a todos que chegaram ate aqui primeiramente por ter acompanhado nosso trabalho e acompanhado nosso raciocínio.
+
+Pré Requisitos
+
+Primeiramente vai precisar na sua máquina de um compliador que obtenha a linguagem Phyton para poder executar as devidas automações, sendo assim também em especifico o navegador Chrome para que tudo seja executado, seguidamente de acesso a internet também.
+
+Iniciando os testes
+
+ao executar o compilador temos 3 cenarios, um de erro, um de mostrar devidas perguntas, outro cenario de login cada um deles sao executados de maneira automática, somente de iniciar o compilador tendo todos os requisitos necessários é tudo feito sozinho.
+
+Analise dos testes
+
+Os testes sao executados de forma rapida, e sem falhas desde que atenda todos os requisitos de instalação, o unico erro que pode haver ao executa-los é no cenario 3 de criar o login de os dados informados ja esta cadastrado no banco de dados do site.
+
+Desenvolvimento
+
+O código é aberto, e sujeito a alterações pode se alterar o que é feito, quais funções fazer, qual navegador usar entre outros...
+
+Construção
+
+O código foi todo construido com a linguagem python com o auxílio do codigo fonte da pagina.
+
+Autores
+
+O codigo por completo foi feito por nós três colaboradores da equipe (Pedro, Thiago e Otavio) ambos trabalhando em todas as etapas sendo da inicial a final.
