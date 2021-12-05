@@ -1,0 +1,30 @@
+"""
+PRIMEIRO TESTE:
+
+Funcionalidade: Busca no Banco de Questões
+Cenário: Busca por questão inexistente
+Dado que navego para a página de busca do banco de questões
+E digito 'Science: Computers' no campo de busca
+Quando clico no botão de buscar
+Então visualizo uma mensagem de erro com o texto 'No questions found.'
+
+"""
+
+from selenium import webdriver
+from time import sleep
+
+navegador = webdriver.Chrome()
+navegador.get(url='https://opentdb.com/')
+navegador.find_element_by_xpath('//*[@id="navbar"]/ul/li[1]/a').click()
+
+sleep(1)
+
+send = 'Science:Computers'
+pesquisa = navegador.find_element_by_xpath('//*[@id="query"]')
+pesquisa.send_keys(send)
+
+sleep(1)
+
+navegador.find_element_by_xpath('//*[@id="page-top"]/div[1]/form/div/button').click()
+
+print()
