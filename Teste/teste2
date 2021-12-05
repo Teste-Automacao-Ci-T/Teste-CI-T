@@ -1,0 +1,37 @@
+"""
+Segundo Teste:
+
+Funcionalidade: Busca no Banco de Questões
+Cenario: Busca pela categoria Science: Computers
+Dado que navego para a página de busca do banco de questões
+E digito 'Science: Computers' no campo de busca
+E seleciono a opção 'Category'
+Quando clico no botão de buscar
+Então visualizo uma listage com 25 questões e o restante da paginação no fim da pagina
+
+"""
+
+from selenium import webdriver
+from time import sleep
+
+navegador = webdriver.Chrome()
+navegador.get(url='https://opentdb.com/')
+navegador.find_element_by_xpath('//*[@id="navbar"]/ul/li[1]/a').click()
+
+sleep(1)
+
+send = 'Science: Computers'
+pesquisa = navegador.find_element_by_xpath('//*[@id="query"]')
+pesquisa.send_keys(send)
+
+sleep(1)
+
+sendCat = 'c'
+selecionar = navegador.find_element_by_xpath('//*[@id="type"]')
+selecionar.send_keys(sendCat)
+
+sleep(1)
+
+navegador.find_element_by_xpath('//*[@id="page-top"]/div[1]/form/div/button').click()
+
+print()
